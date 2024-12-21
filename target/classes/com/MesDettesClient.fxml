@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="453.0" prefWidth="679.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.DetteController">
+   <children>
+      
+      <TableView fx:id="detteTable" layoutX="72.0" layoutY="160.0" prefHeight="263.0" prefWidth="579.0">
+         <columns>
+            <TableColumn fx:id="date" prefWidth="71.3333740234375" text="Date" />
+            <TableColumn fx:id="montant" prefWidth="79.33331298828125" text="Montant" />
+            <TableColumn fx:id="montantRestant" prefWidth="106.0" text="Montant Restant" />
+            <TableColumn fx:id="client" prefWidth="82.6666259765625" text="Client" />
+            <TableColumn fx:id="reglee" prefWidth="76.0" text="Réglée" />
+            <TableColumn fx:id="details" prefWidth="160.00003051757812" text="Détails" />
+         </columns>
+      </TableView>
+
+      <AnchorPane layoutX="-1.0" prefHeight="85.0" prefWidth="685.0" style="-fx-background-color: #000080;">
+         <children>
+            <ImageView fitHeight="57.0" fitWidth="72.0" layoutX="8.0" layoutY="14.0">
+               <image>
+                  <!-- Image ici -->
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+
+      <Button fx:id="creerdettes" layoutX="527.0" layoutY="108.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="118.0" style="-fx-background-color: #0000FF;" text="Faire Demande" textFill="#fbf6f6" />
+      <ComboBox fx:id="filterComboBox" layoutX="225.0" layoutY="118.0" prefHeight="25.0" prefWidth="147.0" />
+      <Text layoutX="128.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Etat">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

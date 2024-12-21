@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="453.0" prefWidth="679.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.UserListController">
+   <children>
+      <AnchorPane prefHeight="453.0" prefWidth="148.0" style="-fx-background-color: #0000FF;">
+         <children>
+            <Button fx:id="articlesButton" layoutX="25.0" layoutY="121.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="85.0" text="Articles" />
+            <Text fill="#f8f5f5" layoutX="26.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+            <Text fill="#fdfafa" layoutX="24.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Button fx:id="dettesButton" layoutX="25.0" layoutY="187.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="85.0" text="Dettes" />
+            <Button fx:id="clientsButton" layoutX="29.0" layoutY="253.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="78.0" text="Clients" />
+            <Button fx:id="usersButton" layoutX="29.0" layoutY="323.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="78.0" text="Users" />
+         </children>
+      </AnchorPane>   
+      <AnchorPane prefHeight="85.0" prefWidth="679.0" style="-fx-background-color: #000080;">
+         <children>
+            <ImageView fitHeight="57.0" fitWidth="72.0" layoutX="14.0" layoutY="11.0">
+               <image>
+                  <!-- <Image url="@/com/images/dette.png" /> -->
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="userTable" layoutX="173.0" layoutY="162.0" prefHeight="263.0" prefWidth="486.0">
+         <columns>
+            <TableColumn fx:id="IDColumn" prefWidth="71.3333740234375" text="ID" />
+            <TableColumn fx:id="prenom" prefWidth="93.3333740234375" text="prenom" />
+            <TableColumn fx:id="nom" prefWidth="90.0" text="nom" />
+            <TableColumn fx:id="login" prefWidth="108.0" text="login" />
+            <TableColumn fx:id="role" prefWidth="120.0" text="role" />
+         </columns>
+      </TableView>
+      <TextField fx:id="filtretext" layoutX="265.0" layoutY="116.0" />
+      <Button fx:id="filtrer" layoutX="434.0" layoutY="110.0" mnemonicParsing="false" onAction="#handleFilterAction" prefHeight="37.0" prefWidth="72.0" style="-fx-background-color: #0000FF;" text="filtrer" textFill="#f2ecec">
+         <font>
+            <Font size="17.0" />
+         </font></Button>
+            <Button fx:id="createUserButton" layoutX="539.0" layoutY="110.0" onAction="#handleCreateUserButton" prefHeight="38.0" prefWidth="126.0" style="-fx-background-color: #0000FF;" text="Créer un Utilisateur" textFill="#fdfcfc" />
+      <Text layoutX="199.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filtre">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

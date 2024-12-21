@@ -1,0 +1,54 @@
+persistance: "Sama"
+
+repositories:
+  # MYSQLDETTES:
+  #   userRepository: com.java.repository.jpa.UserJpa
+  #   clientRepository: com.java.repository.jpa.ClientJpa
+  #   detteRepository: com.java.repository.jpa.DetteJpa
+  #   articleRepository: com.java.repository.jpa.ArticleJpa
+  #   paiementRepository: com.java.repository.jpa.PaiementJpa
+  #   detailRepository: com.java.repository.jpa.DetailsJpa
+
+  POSTGRESQLDETTES:
+    userRepository: com.java.repository.postgreImpl.UserRepositoryPostgreImpl
+    clientRepository: com.java.repository.postgreImpl.ClientRepositoryPostgreImpl
+    detteRepository: com.java.repository.postgreImpl.DetteRepositoryPostgreImpl
+    articleRepository: com.java.repository.postgreImpl.ArticleRepositoryPostgreImpl
+    paiementRepository: com.java.repository.postgreImpl.PaiementRepositoryPostImpl
+    detailRepository: com.java.repository.postgreImpl.DetailRepositoryPostImpl
+
+services:
+  client: com.java.services.ClientService
+  user: com.java.services.UserService
+  dette: com.java.services.DetteService
+  article: com.java.services.ArticleService
+  paiement: com.java.services.PaiementService
+  detail: com.java.services.DetailService
+
+# spring:
+#   profiles:
+#     active: postgresql  # Mettre PostgreSQL comme profil actif
+#   datasource:
+#     url: jdbc:postgresql://localhost:5432/sama  # URL pour PostgreSQL
+#     username: postgres  # Nom d'utilisateur PostgreSQL
+#     password: Taphatall01  # Mot de passe PostgreSQL
+#     driver-class-name: org.postgresql.Driver
+#   jpa:
+#     hibernate:
+#       ddl-auto: update
+#     show-sql: true
+#     database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+# spring:
+#   profiles:
+#     active: mysql  
+#   datasource:
+#     url: jdbc:mysql://localhost:3306/ges_dette  # URL pour MySQL
+#     username: root  # Nom d'utilisateur MySQL
+#     password:   # Mot de passe MySQL
+#     driver-class-name: com.mysql.cj.jdbc.Driver
+#   jpa:
+#     hibernate:
+#       ddl-auto: update
+#     show-sql: true
+#     database-platform: org.hibernate.dialect.MySQLDialect

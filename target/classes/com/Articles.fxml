@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="453.0" prefWidth="679.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.ArticleListController">
+   <children>
+      <!-- Menu latéral -->
+      <AnchorPane prefHeight="453.0" prefWidth="148.0" style="-fx-background-color: #0000FF;" >
+         <children>
+            <Button fx:id="articlesButton" layoutX="25.0" layoutY="121.0" mnemonicParsing="false" prefHeight="25.0" onAction="#handleArticlesButtonAction" prefWidth="85.0" text="Articles" />
+            <Text fill="#f8f5f5" layoutX="26.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+            <Text fill="#fdfafa" layoutX="24.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Button fx:id="dettesButton" layoutX="25.0" layoutY="187.0" mnemonicParsing="false" prefHeight="25.0" onAction="#handleDettesButtonAction" prefWidth="85.0" text="Dettes" />
+            <Button fx:id="clientsButton" layoutX="29.0" layoutY="253.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="78.0" onAction="#handleClientsButtonAction" text="Clients" />
+            <Button fx:id="usersButton" layoutX="29.0" layoutY="323.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="78.0" onAction="#handleUsersButtonAction" text="Users" />
+         </children>
+      </AnchorPane>
+      
+
+      <!-- Bandeau supérieur -->
+      <AnchorPane prefHeight="85.0" prefWidth="679.0" style="-fx-background-color: #000080;">
+         <children>
+            <ImageView fitHeight="64.0" fitWidth="72.0" layoutX="14.0" layoutY="11.0">
+               <image>
+                  <!-- <Image url="@/com/images/dette.png" /> -->
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+
+      <!-- Tableau d'articles -->
+      <TableView fx:id="articleTable" layoutX="190.0" layoutY="156.0" prefHeight="263.0" prefWidth="366.0">
+         <columns>
+            <TableColumn fx:id="IDColumn" prefWidth="71.3333740234375" text="ID" />
+            <TableColumn fx:id="libelleColumn" prefWidth="79.33331298828125" text="Libellé" />
+            <TableColumn fx:id="refColumn" prefWidth="83.99993896484375" text="Référence" />
+            <TableColumn fx:id="qteStockColumn" prefWidth="66.666748046875" text="Quantité" />
+            <TableColumn fx:id="prixColumn" prefWidth="75.0" text="Prix" />
+         </columns>
+      </TableView>
+
+      <!-- Bouton pour créer un article -->
+      <Button fx:id="creerButton" layoutX="556.0" layoutY="114.0" onAction="#creerButton" text="Ajouter un article" />
+            <!-- Filtre des articles -->
+      <ComboBox fx:id="filterComboBox" layoutX="264.0" layoutY="113.0" prefHeight="27.0" prefWidth="173.0" />
+      <Text layoutX="198.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filtrer">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

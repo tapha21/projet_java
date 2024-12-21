@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane fx:controller="com.controller.ArticleController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="649.0" style="-fx-background-color: ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">   <children>
+      <Label layoutX="46.0" layoutY="109.0" prefHeight="29.0" prefWidth="72.0" text="libelle" textAlignment="CENTER">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="391.0" layoutY="110.0" text="Prix">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="47.0" layoutY="195.0" text="quantite">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="367.0" layoutY="207.0" text="reference">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="libelle" layoutX="131.0" layoutY="111.0" />
+      <TextField fx:id="prix" layoutX="453.0" layoutY="111.0" />
+      <TextField fx:id="quantite" layoutX="147.0" layoutY="196.0" />
+      <TextField fx:id="reference" layoutX="469.0" layoutY="196.0" />
+      <Text layoutX="216.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ENREGISTREMENT ARTICLES">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Text>
+      <Button fx:id="ADDBTN" layoutX="274.0" layoutY="294.0" mnemonicParsing="false" text="ENREGISTRER" />
+      <Button fx:id="returnbtn" text="Retour" onAction="#retour" />
+
+   </children>
+</AnchorPane>
